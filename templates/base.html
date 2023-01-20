@@ -22,6 +22,14 @@
                     Blog Application
                 </a>
             </h1>
+            {% if user.is_authenticated %}
+            <p>Hello, {{ user.username }}!</p>
+            <p><a href="{% url 'logout' %}">Log out</a></p>
+            {% else %}
+            <p>You're not logged</p>
+            <p><a href="{% url 'login' %}">Log In</a></p>
+            <p><a href="{% url 'signup' %}">Sign Up</a></p>
+            {% endif %}
         </div>
         <div class="nav-right">
             <h2>
