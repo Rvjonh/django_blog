@@ -16,9 +16,18 @@
 
 <body>
     <header>
-        <a href="{% url 'home' %}">
-            <h1>Blog Application</h1>
-        </a>
+        <div class="nav-left">
+            <h1>
+                <a href="{% url 'home' %}">
+                    Blog Application
+                </a>
+            </h1>
+        </div>
+        <div class="nav-right">
+            <h2>
+                <a href="{% url 'post_new' %}">+ New Blog Post</a>
+            </h2>
+        </div>
     </header>
 
     <div>
